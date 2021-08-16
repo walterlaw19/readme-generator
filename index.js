@@ -9,6 +9,16 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 inquirer.prompt ([
     {
         type: 'input',
+        name: 'GitHubName',
+        message: 'What is the name of your GitHub?',
+    },
+    {
+        type: 'input',
+        name: 'GitHubRepo',
+        message: 'what is the name of your GitHub Repository?',
+    },
+    {
+        type: 'input',
         name: 'name',
         message: 'what is your project title?',
         validate: projectNameInput => {
@@ -36,7 +46,7 @@ inquirer.prompt ([
     {
         type: 'input',
         name: 'TableofContents',
-        message: 'Would you like to add a Table of Contents?',
+        message: 'Please add a Table of Contents',
     },
     {
         type: 'input',
@@ -56,7 +66,7 @@ inquirer.prompt ([
     },
     {
         type: 'input',
-        name: 'Contributing',
+        name: 'Contributor',
         message: 'List your collaborators',
     },
     {
@@ -67,7 +77,7 @@ inquirer.prompt ([
     {
         type: 'input',
         name: 'Questions',
-        message: 'Please add any questions in regards to your project',
+        message: 'Please enter your e-mail address',
     }
 ]).then((answers) => {
     console.log(answers)
@@ -78,11 +88,30 @@ inquirer.prompt ([
 });
 
 // const fileName = ()
+// const filename = data.name.toLowerCase().split(" ").join("") + ".json";
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile()
+// TODO: Create a function to write README file // writeToFile('./Readme.md',  )
+
+
+
+function writeToFile (filename, data) {
+    fs.writeFile(filename, data, err => {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("Success! RD is done")
+    });
 }
+
+
+
+
+
+
+// function writeToFile() {
+//     fs.writeFile('./dist/READme.md', desiredOutput)
+// }
 
 // TODO: Create a function to initialize app
 function init() {
@@ -92,7 +121,6 @@ function init() {
 // Function call to initialize app
 init();
 
-// writeToFile('./Readme.md',  )
 
 
 
