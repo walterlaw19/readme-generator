@@ -87,10 +87,6 @@ inquirer.prompt ([
     console.log(desiredOutput)
 
 
-
-
-
-
 });
 
 // const fileName = ()
@@ -104,18 +100,18 @@ function writeToFile () {
     fs.writeFile('./utils/READme.md', desiredOutput, err => {
         if (err) {
             return console.log(err);
+            
         }
 
         console.log("Success! RD is done")
+        console.log(desiredOutput);
     });
 }
 
-// writeToFile();
 
-
-
-
-
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  }
 
 // function writeToFile() {
 //     fs.writeFile('./dist/READme.md', desiredOutput)
@@ -123,18 +119,15 @@ function writeToFile () {
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile()
+    
+    // writeToFile();
     
 }
-
-// Function call to initialize app
 init();
 
 
-
-
-
-
+// inquirer.prompt();
+// Function call to initialize app
 
 
 
