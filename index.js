@@ -85,6 +85,12 @@ inquirer.prompt ([
     const desiredOutput = generateMarkdown(answers);
 
     console.log(desiredOutput)
+
+
+
+
+
+
 });
 
 // const fileName = ()
@@ -94,8 +100,8 @@ inquirer.prompt ([
 
 
 
-function writeToFile (filename, data) {
-    fs.writeFile(filename, data, err => {
+function writeToFile () {
+    fs.writeFile('./utils/READme.md', desiredOutput, err => {
         if (err) {
             return console.log(err);
         }
@@ -103,6 +109,8 @@ function writeToFile (filename, data) {
         console.log("Success! RD is done")
     });
 }
+
+// writeToFile();
 
 
 
@@ -115,6 +123,7 @@ function writeToFile (filename, data) {
 
 // TODO: Create a function to initialize app
 function init() {
+    writeToFile()
     
 }
 
