@@ -4,7 +4,21 @@ const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-// TODO: Create an array of questions for user input
+
+
+
+// function writeToFile(fileName, data) {
+//     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+//   }
+
+// function writeToFile() {
+//     fs.writeFile('./dist/READme.md', desiredOutput)
+// }
+
+// TODO: Create a function to initialize app
+function init() {
+
+    // TODO: Create an array of questions for user input
 // const questions = [        
 inquirer.prompt ([
     {
@@ -84,7 +98,8 @@ inquirer.prompt ([
 
     const desiredOutput = generateMarkdown(answers);
 
-    console.log(desiredOutput)
+    writeToFile('./utils/READme.md', desiredOutput)
+    // console.log('desiredOutput')
 
 
 });
@@ -96,61 +111,24 @@ inquirer.prompt ([
 
 
 
-function writeToFile () {
-    fs.writeFile('./utils/READme.md', desiredOutput, err => {
+function writeToFile (fileName, data) {
+    fs.writeFile(fileName, data, err => {
         if (err) {
             return console.log(err);
             
         }
 
         console.log("Success! RD is done")
-        console.log(desiredOutput);
+        
     });
 }
 
 
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-  }
 
-// function writeToFile() {
-//     fs.writeFile('./dist/READme.md', desiredOutput)
-// }
 
-// TODO: Create a function to initialize app
-function init() {
     
-    // writeToFile();
     
 }
 init();
 
 
-// inquirer.prompt();
-// Function call to initialize app
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function displayWord(word) {
-//     console.log(word)
-//   }
-  
-//   displayWord('Hi!') // ---> Hi!
-  
-//   const displayWord = (word) => {
-//     console.log(word)
-//   }
