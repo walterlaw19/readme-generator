@@ -19,35 +19,39 @@ function generateMarkdown(answers) {
   ${answers.description}
 
   ## Table of Contents
-  ${answers.TableofContents}
+  * [Installation] (#Installation)
+  * [Usage] (#Usage)
+  * [License] (#License)
+  * [Contributor] (#Contributor)
+  * [Tests] (#Tests)
+  * [Questions] (#Questions)
+
+
+
+
 
   ## Installation
   ${answers.Installation}
 
-
-
   ## Usage
   ${answers.Usage}
-
 
   ## License
   ${answers.License}
 
-
   ## contribution
   ${answers.Contributor}
 
-
   ## Tests
   ${answers.Tests}
-
 
   ## Questions
 
   If you have any questions, you can reach me at ${answers.Questions}
 
+  and/or
 
-  href="https://github.com/${answers.GitHubName}">GitHub
+  https://github.com/${answers.GitHubName}
 
   ---
   ##### © 2021 WG.
