@@ -59,33 +59,33 @@ inquirer.prompt ([
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Provide a step-by-step description to install your project',
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Provide instructions and examples for use.',
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'Choose a license for your project',
         choices: ['license1', 'license2', 'license3', 'license4', 'license5']
     },
     {
         type: 'input',
-        name: 'Contributor',
+        name: 'contributor',
         message: 'List your collaborators',
     },
     {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'Write tests for your application and provide examples on how to run them.',
     },
     {
         type: 'input',
-        name: 'Questions',
+        name: 'questions',
         message: 'Please enter your e-mail address',
     }
 ]).then((answers) => {

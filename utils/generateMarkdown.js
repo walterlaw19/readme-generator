@@ -19,35 +19,35 @@ function generateMarkdown(answers) {
   ${answers.description}
 
   ## Table of Contents
-  * [Installation] (#Installation)
-  * [Usage] (#Usage)
-  * [License] (#License)
-  * [Contributor] (#Contributor)
-  * [Tests] (#Tests)
-  * [Questions] (#Questions)
+  * [Installation] (#installation)
+  * [Usage] (#usage)
+  * [License] (#license)
+  * [Contributor] (#contributor)
+  * [Tests] (#tests)
+  * [Questions] (#questions)
 
 
 
 
 
   ## Installation
-  ${answers.Installation}
+  ${answers.installation}
 
   ## Usage
-  ${answers.Usage}
+  ${answers.usage}
 
   ## License
-  ${answers.License}
+  ${answers.license}
 
   ## contribution
-  ${answers.Contributor}
+  ${answers.contributor}
 
   ## Tests
-  ${answers.Tests}
+  ${answers.tests}
 
   ## Questions
 
-  If you have any questions, you can reach me at ${answers.Questions}
+  If you have any questions, you can reach me at ${answers.questions}
 
   and/or
 
