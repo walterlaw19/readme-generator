@@ -13,6 +13,8 @@ The Weather Application using weather API provides you the current weather, date
 * BootStraps
 * Moment.js
 
+* [hi] (#Usage)
+
 ## Installation
 
 https://walterlaw19.github.io/weather-dashboard/
