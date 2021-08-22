@@ -3,25 +3,26 @@
 function renderLicenseBadge(license) {
   if (license === 'No License') {
     return ''
-  } else {
-    return 
+  }
+  else if (license === 'Perl') {
+    return 'https://opensource.org/licenses/Artistic-2.0'
+  }
+  else if (license === 'Mozilla') {
+    return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+  }
+  else if (license === 'MIT') {
+    return 'https://opensource.org/licenses/MIT'
+  }
+  else if (license === 'IBM') {
+    return 'https://opensource.org/licenses/IPL-1.0'
+  } else if (license === 'Zlib') {
+    return 'https://opensource.org/licenses/Zlib'
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === 'No License') {
-    return ''
-  } else {
-    return 
-  }
-
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
   if (license === 'No License') {
     return ''
   }
@@ -42,10 +43,36 @@ function renderLicenseSection(license) {
 
 }
 
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if (license === 'No License') {
+    return ''
+  }
+  else if (license === 'Perl') {
+    return 'https://opensource.org/licenses/Artistic-2.0'
+  }
+  else if (license === 'Mozilla') {
+    return "The MPL is a simple copyleft license. The MPL's 'file-level' copyleft is designed to encourage contributors to share modifications they make to your code, while still allowing them to combine your code with code under other licenses (open or proprietary) with minimal restrictions."
+  }
+  else if (license === 'MIT') {
+    return 'https://opensource.org/licenses/MIT'
+  }
+  else if (license === 'IBM') {
+    return 'https://opensource.org/licenses/IPL-1.0'
+  } else if (license === 'Zlib') {
+    return 'https://opensource.org/licenses/Zlib'
+  }
+
+}
+
+
+
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `
-  # ${answers.name}  ${answers.license}
+  # ${answers.name}  ${renderLicenseBadge(answers.license)}
 
   ## Description
   ${answers.description}
@@ -65,7 +92,9 @@ function generateMarkdown(answers) {
   ${answers.usage}
 
   ## License
-  ${answers.license} (description or link)
+  ${renderLicenseSection(answers.license)} 
+  
+  for more information, visit: ${renderLicenseLink(answers.license)}
 
   ## contribution
   ${answers.contributor}
