@@ -41,7 +41,7 @@ Here is a sample readme created with this application:
 ![](Readme-images/screenshot2.PNG) "inquirer prompting questions"
 ![](Readme-images/screenshot1.PNG) "Readme generated"
 
-[Click here to see a demo video](https://drive.google.com/drive/folders/1vARwmQS7eUjfbn1kMgVSs2136fCuRzKU)
+[Click here to see a demo video](https://drive.google.com/file/d/1EkY0NhtOeCyj934PYp1nhqgi_yBgMbzD/view?usp=sharing)
 
 ## Usage
 
