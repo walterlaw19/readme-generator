@@ -4,126 +4,104 @@ const fs = require('fs');
 
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-
-
-
-// function writeToFile(fileName, data) {
-//     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-//   }
-
-// function writeToFile() {
-//     fs.writeFile('./dist/READme.md', desiredOutput)
-// }
-
 // TODO: Create a function to initialize app
 function init() {
-
-    // TODO: Create an array of questions for user input
-// const questions = [        
-inquirer.prompt ([
-    {
-        type: 'input',
-        name: 'GitHubName',
-        message: 'What is the name of your GitHub?',
-    },
-    {
-        type: 'input',
-        name: 'GitHubRepo',
-        message: 'what is the name of your GitHub Repository?',
-    },
-    {
-        type: 'input',
-        name: 'name',
-        message: 'what is your project title?',
-        validate: projectNameInput => {
-            if (projectNameInput) {
-              return true;
-            } else {
-              console.log('Please enter the name of your project title!');
-              return false;
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'GitHubName',
+            message: 'What is your GitHub username?',
+            validate: projectGitHubNameInput => {
+                if (projectGitHubNameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
             }
-        }
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: 'please add a description for your GitHub',
-        validate: projectDescInput => {
-            if (projectDescInput) {
-              return true;
-            } else {
-              console.log('Please enter a description for your project!');
-              return false;
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'what is your project title?',
+            validate: projectNameInput => {
+                if (projectNameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the name of your project title!');
+                    return false;
+                }
             }
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'please add a description for your GitHub',
+            validate: projectDescInput => {
+                if (projectDescInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a description for your project!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'Provide a step-by-step description to install your project',
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide instructions and examples for use.',
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'Choose a license for your project',
+            choices: ['Perl', 'Mozilla', 'MIT', 'IBM', 'Zlib']
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'Please enter your contact email to contribute',
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Write tests for your application and provide examples on how to run them.',
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'Please enter your e-mail address',
         }
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'Provide a step-by-step description to install your project',
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Provide instructions and examples for use.',
-    },
-    {
-        type: 'list',
-        name: 'license',
-        message: 'Choose a license for your project',
-        choices: ['Perl', 'Mozilla', 'MIT', 'IBM', 'Zlib']
-    },
-    {
-        type: 'input',
-        name: 'contributor',
-        message: 'List your collaborators',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Write tests for your application and provide examples on how to run them.',
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'Please enter your e-mail address',
-    }
-]).then((answers) => {
-    console.log(answers)
+    ]).then((answers) => {
+        console.log(answers)
 
-    const desiredOutput = generateMarkdown(answers);
+        const desiredOutput = generateMarkdown(answers);
 
-    writeToFile('./utils/READme.md', desiredOutput)
-    // console.log('desiredOutput')
+        writeToFile('./dist/READme.md', desiredOutput)
 
-
-});
-
-// const fileName = ()
-// const filename = data.name.toLowerCase().split(" ").join("") + ".json";
-
-// TODO: Create a function to write README file // writeToFile('./Readme.md',  )
-
-
-
-function writeToFile (fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err);
-            
-        }
-
-        console.log("Success! RD is done")
-        
     });
+
+
+
+    function writeToFile(fileName, data) {
+        fs.writeFile(fileName, data, err => {
+            if (err) {
+                return console.log(err);
+
+            }
+
+            console.log("Success! RD is done")
+
+        });
+    }
+
 }
 
-
-
-
-    
-    
-}
 init();
 
 

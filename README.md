@@ -1,51 +1,57 @@
 # Readme Generator
 
 ## Description
-The Weather Application using weather API provides you the current weather, date, wind and UV index more so you can go out safe knowing if the conditions are favorable. Also, it renders a 5 day forecast of the city you are vacationing so you can plan ahead. The search history allows you to see the cities you already viewed and allows you to view them again. This powerful application is brought to you by openweathermap.com and also uses:
+An application to generate a Readme by answering simple questions in regards to your project using npm inquirer.
 
 ## Table of Contents
 
-[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)]
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-
-
-
-* HTML
-* CSS
-* Javascript
-* DOM
-* JQuery
-* BootStraps
-* Moment.js
-
-
-* [testing](#usage)
-
-
+* [Installation](#installation)
+* [Demo](#demo)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Tests](#tests)
+* [Questions](#questions)
 
 
 ## Installation
 
+1. You must download and install Node.js click on link: https://nodejs.org/en/download/
+
+2. copy or clone this repo into the folder where you want the readme to be created:
+    * git@github.com:walterlaw19/portfolio-generator.git
+
+3. 
+
+4. 
+
 https://walterlaw19.github.io/weather-dashboard/
+
+## Demo
+
+![]  <!--pics go here
 
 ## Usage
 
-![](Readme-images/screenshot1.PNG) "Screenshot1"
-![](Readme-images/screenshot2.PNG) "Screenshot2"
-![](Readme-images/screenshot3.PNG) "Screenshot3"
+You can use this generator to create a Readme for your repository!
 
-
+ 
 ## License
 
 
 ## contribution
 
+Please send me an email if you can want to contribute or submit any suggestions: walterlaw19@gmail.com
+
 
 ## Tests
 
+
 ## Questions
+
+If you have any questions or concerns, you can reach me at: walterlaw19@gmail.com
+
+or visit my GitHub: https://github.com/walterlaw19
 
 
 
@@ -55,6 +61,13 @@ Made by by Walter G
 
 ---
 ##### © 2021 WG.
+
+
+
+
+
+
+
 
 
 GIVEN a command-line application that accepts user input
