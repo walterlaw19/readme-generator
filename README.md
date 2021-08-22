@@ -1,7 +1,11 @@
 # Readme Generator
 
 ## Description
-An application to generate a Readme by answering simple questions in regards to your project using npm inquirer.
+An application to generate a Readme by answering simple questions in regards to your project using npm inquirer. You can input your repo username and email address so people can contact you with questions.
+
+Here is a sample readme created with this application:
+
+[click here](sample-readme/sampleReadme.md)
 
 ## Table of Contents
 
@@ -10,7 +14,6 @@ An application to generate a Readme by answering simple questions in regards to 
 * [Usage](#usage)
 * [License](#license)
 * [Contribution](#contribution)
-* [Tests](#tests)
 * [Questions](#questions)
 
 
@@ -18,18 +21,27 @@ An application to generate a Readme by answering simple questions in regards to 
 
 1. You must download and install Node.js click on link: https://nodejs.org/en/download/
 
-2. copy or clone this repo into the folder where you want the readme to be created:
-    * git@github.com:walterlaw19/portfolio-generator.git
+2. copy or clone this repo into the folder where you want the readme to be created by entering the command on your terminal (mac) or gitbash (windows):
+    * git clone git@github.com:walterlaw19/portfolio-generator.git
 
-3. 
+3. then change directory into the readme folder: cd readme-generator
 
-4. 
+4. install the inquirer package by entering the command: npm install inquirer
 
-https://walterlaw19.github.io/weather-dashboard/
+5. after the installation has be completed, enter the following command to run the index file and answer the questions to create you ReadMe: node index
+
+6. answer all the questions and selecte your license.  Some questions might be skipped by just pressing Enter.
+
+7. After all questions are done, go to the dist folder and you will find the Readme.md - open it or right click for open preview to see it.
+
+
 
 ## Demo
 
-![]  <!--pics go here
+![](Readme-images/screenshot2.PNG) "inquirer prompting questions"
+![](Readme-images/screenshot1.PNG) "Readme generated"
+
+[Click here to see a demo video](https://drive.google.com/drive/folders/1vARwmQS7eUjfbn1kMgVSs2136fCuRzKU)
 
 ## Usage
 
@@ -38,13 +50,14 @@ You can use this generator to create a Readme for your repository!
  
 ## License
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## contribution
 
 Please send me an email if you can want to contribute or submit any suggestions: walterlaw19@gmail.com
 
 
-## Tests
 
 
 ## Questions
@@ -65,30 +78,3 @@ Made by by Walter G
 
 
 
-
-
-
-
-
-GIVEN a command-line application that accepts user input
-
-<!-- WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions -->
-
-<!-- WHEN I enter my project title
-THEN this is displayed as the title of the README -->
-
-<!-- WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests -->
-
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
-<!-- WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile -->
-
-<!-- WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions -->
-
-<!-- WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README -->
