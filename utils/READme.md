@@ -5,12 +5,12 @@
   aslfjal
 
   ## Table of Contents
-  * [Installation] (#installation)
-  * [Usage] (#usage)
-  * [License] (#license)
-  * [Contributor] (#contributor)
-  * [Tests] (#tests)
-  * [Questions] (#questions)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributor](#contributor)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
 
 

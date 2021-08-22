@@ -71,7 +71,7 @@ inquirer.prompt ([
         type: 'list',
         name: 'license',
         message: 'Choose a license for your project',
-        choices: ['license1', 'license2', 'license3', 'license4', 'license5']
+        choices: ['Perl', 'Mozilla', 'MIT', 'IBM', 'Zlib']
     },
     {
         type: 'input',
